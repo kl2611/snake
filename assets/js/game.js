@@ -82,6 +82,41 @@ var Game = {
 
             snake.push(lastCell);
             firstCell = lastCell;
+
+            if (addNew) {
+                snake.unshift(game.add.sprite(oldLastCellx, oldLastCelly, 'snake'));
+                addNew = false;
+            }
+
+            this.appleCollision();
+            this.selfCollision(firstCell);
+            this.wallCollision(firstCell);
+        }
+    },
+
+    appleCollision: function() {
+        for (var i = 0; i < snake.length; i ++) {
+            if (snake[i].x == apple.x && snake[i].y == apple.y) {
+                addNew = true;
+                apple.destroy();
+                this.generateApple();
+                score++;
+                scoreTextValue.text = score.toString();
+            }
+        }
+    },
+
+    selfCollision: function(head) {
+        for (var i = 0; i < snake.length - 1; i++) {
+            if (head.x == snake[i].x && head.y == snake[i].y) {
+                game.state.start('Game_Over');
+            }
+        }
+    },
+
+    wallCollision: function(head) {
+        if (head.x >= 600 || head.x < 0 || head.y >= 450 || head.y < 0) {
+            game.state.start('Game_Over');
         }
     },
 
