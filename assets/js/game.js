@@ -22,7 +22,7 @@ var Game = {
 
         cursors = game.input.keyboard.createCursorKeys();
 
-        game.state.backgroundColor = '#061f27';
+        game.stage.backgroundColor = '#1f2629';
 
         for (var i = 0; i < 10; i++) {
             snake[i] = game.add.sprite(150 + i * squareSize, 150, 'snake');
@@ -36,7 +36,7 @@ var Game = {
         game.add.text(30, 20, "SCORE", textStyle_Key);
         scoreTextValue = game.add.text(90, 18, score.toString(), textStyle_Value);
 
-        game.add.text(500, 20, "SPEED", textStyle_Key);
+        game.add.text(500, 20, "LEVEL", textStyle_Key);
         speedTextValue = game.add.text(558, 18, speed.toString(), textStyle_Value);
     },
 
