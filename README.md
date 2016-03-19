@@ -10,5 +10,5 @@ Written using JavaScript and HTML5 with the Phaser framework. Javascript functio
 
 ###Future Updates
 - [ ] Change levels of difficulty (easy, medium, hard)
-- [ ] Leaderboard
+- [ ] Global leaderboard
 - [ ] Pause game
