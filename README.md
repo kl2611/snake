@@ -1,5 +1,7 @@
 # Snake
 
+<a href="http://kl2611.github.io/snake/" target="_blank">Play here!</a>
+
 ###Instructions
 Use arrow keys to move and collect the apples! Every 5 points will increase the level and speed of the snake. 
 
